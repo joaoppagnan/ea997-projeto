@@ -12,3 +12,4 @@ Repositório para guardar os arquivos do meu projeto de EA997 - Introdução à 
 ## *Links* úteis
 1. [Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network](https://github.com/awni/ecg)
 1. [ECG classification using MIT-BIH dataset](https://github.com/physhik/ecg-mit-bih)
+1. [Arrhythmia prediction on ECG data using CNN](https://medium.com/ai-techsystems/arrhythmia-prediction-on-ecg-data-using-cnn-54b79363906f)
