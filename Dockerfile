@@ -24,4 +24,4 @@ RUN apt install texlive dvipng texlive-latex-extra texlive-fonts-recommended gho
 RUN apt install nodejs -y
 
 # enable a port for jupyter
-EXPOSE 2048
+EXPOSE 8888

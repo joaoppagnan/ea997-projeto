@@ -1,0 +1,1 @@
+docker build -t ea997-projeto .
