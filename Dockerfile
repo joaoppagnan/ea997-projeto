@@ -1,5 +1,5 @@
 # import Tensorflow GPU ready docker image
-FROM tensorflow/tensorflow:2.4.1-gpu
+FROM tensorflow/tensorflow:latest-gpu
 
 # setup docker folder
 WORKDIR /ea997-projeto
