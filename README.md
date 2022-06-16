@@ -13,3 +13,5 @@ Repositório para guardar os arquivos do meu projeto de EA997 - Introdução à 
 1. [Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network](https://github.com/awni/ecg)
 1. [ECG classification using MIT-BIH dataset](https://github.com/physhik/ecg-mit-bih)
 1. [Arrhythmia prediction on ECG data using CNN](https://medium.com/ai-techsystems/arrhythmia-prediction-on-ecg-data-using-cnn-54b79363906f)
+1. [CSE616 - Final Project](https://www.kaggle.com/code/yomnahesham/cse616-final-project)
+1. [Starter: MIT-BIH Database 0f550ff8-7](https://www.kaggle.com/code/nickziwang/starter-mit-bih-database-0f550ff8-7)
