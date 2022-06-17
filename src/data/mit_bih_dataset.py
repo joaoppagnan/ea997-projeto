@@ -11,23 +11,22 @@ class MIT_BIH_Dataset:
         self.classes = ['N', 'L', 'R', 'A', 'V']
         self.n_classes = len(self.classes)
         self.count_classes = [0]*self.n_classes
-        self.X = list()
+        self.original_data = list()
         self.y = list()
 
-    def denoise(self): 
+    def denoise_data(self): 
         w = pywt.Wavelet('sym4')
-        maxlev = pywt.dwt_max_level(len(self.X), w.dec_len)
+        maxlev = pywt.dwt_max_level(len(self.original_data), w.dec_len)
         threshold = 0.04 # Threshold for filtering
 
-        coeffs = pywt.wavedec(self.X, 'sym4', level=maxlev)
+        coeffs = pywt.wavedec(self.original_data, 'sym4', level=maxlev)
         for i in range(1, len(coeffs)):
             coeffs[i] = pywt.threshold(coeffs[i], threshold*max(coeffs[i]))
             
-        datarec = pywt.waverec(coeffs, 'sym4')
-        
-        return datarec
+        self.clean_data = pywt.waverec(coeffs, 'sym4')
+        return
 
-    def get_filenames_annotations(self):
+    def process_filenames_annotations(self):
         # Read files
         filenames = next(os.walk(self.path))[2]
 
@@ -45,3 +44,10 @@ class MIT_BIH_Dataset:
             # *.txt
             else:
                 self.annotations.append(self.path + filename + file_extension)
+        return
+
+    def get_clean_data(self):
+        return self.clean_data
+
+    def get_filenames_annotations(self):
+        return (self.filenames, self.annotations)
