@@ -13,6 +13,7 @@ class MIT_BIH_Dataset:
         self.count_classes = [0]*self.n_classes
         self.original_data = list()
         self.y = list()
+        pass
 
     def denoise_data(self): 
         w = pywt.Wavelet('sym4')
@@ -24,7 +25,7 @@ class MIT_BIH_Dataset:
             coeffs[i] = pywt.threshold(coeffs[i], threshold*max(coeffs[i]))
             
         self.clean_data = pywt.waverec(coeffs, 'sym4')
-        return
+        pass
 
     def process_filenames_annotations(self):
         # Read files
@@ -44,7 +45,7 @@ class MIT_BIH_Dataset:
             # *.txt
             else:
                 self.annotations.append(self.path + filename + file_extension)
-        return
+        pass
 
     def get_clean_data(self):
         return self.clean_data
