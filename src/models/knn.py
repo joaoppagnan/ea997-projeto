@@ -2,7 +2,7 @@ import numpy as np
 import sklearn
 from sklearn.neighbors import KNeighborsClassifier
 
-class KNN_model():
+class KNN_Model():
     def __init__(self, X_train:np.ndarray, y_train:np.ndarray, n_neighbors:int=5):
         self.model = KNeighborsClassifier(n_neighbors=n_neighbors)
         self.X_train = X_train
