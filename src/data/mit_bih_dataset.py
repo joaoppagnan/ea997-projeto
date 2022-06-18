@@ -10,6 +10,8 @@ class MIT_BIH_Dataset:
         self.count_classes = [0]*self.n_classes
         self.X_data = list()
         self.y_data = list()
+        self.process_filenames_annotations()
+        self.extract_data()
         pass
 
     def process_filenames_annotations(self):
@@ -30,6 +32,9 @@ class MIT_BIH_Dataset:
             # *.txt
             else:
                 self.annotations.append(self.path + filename + file_extension)
+        pass
+
+    def extract_data(self):
         pass
 
     def get_filenames_annotations(self):
