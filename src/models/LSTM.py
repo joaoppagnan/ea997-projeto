@@ -2,6 +2,10 @@ import numpy as np
 import sklearn
 import tensorflow as tf
 from tensorflow import keras
+import statistics
+
+physical_devices = tf.config.list_physical_devices('GPU') 
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 class LSTM_Classifier:
     def __init__(self, X_train:np.ndarray, y_train:np.ndarray, X_val:np.ndarray, y_val:np.ndarray, n_labels:int, input_shape:tuple, n_neurons:int = 100):
@@ -36,7 +40,16 @@ class LSTM_Classifier:
         self.y_pred = self.model.predict(X_test)
         pass
 
-    def eval_model(self, y_test:np.ndarray):
-        f1  = sklearn.metrics.f1_score(y_test, self.y_pred, average='macro')
-        acc = sklearn.metrics.accuracy_score(y_test, self.y_pred)
-        pass
+    def eval_model(self, X_test:np.ndarray, y_test:np.ndarray, n_eval_times:int=5):
+        f1_set, acc_set = [], []
+        for i in range(0, n_eval_times):
+            self.model = None
+            self.create_model()
+            self.compile()
+            self.fit(verbose=0)
+            self.predict(X_test)
+            f1_set.append(sklearn.metrics.f1_score(y_test, self.y_pred, average='macro'))
+            acc_set.append(sklearn.metrics.accuracy_score(y_test, self.y_pred))
+        f1_mean_std = [statistics.mean(f1_set), statistics.stdev(f1_set)]
+        acc_mean_std = [statistics.mean(acc_set), statistics.stdev(acc_set)]
+        return (f1_mean_std, acc_mean_std)
