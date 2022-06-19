@@ -7,18 +7,20 @@ import statistics
 physical_devices = tf.config.list_physical_devices('GPU') 
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
-class LSTM_Classifier:
-    def __init__(self, X_train:np.ndarray, y_train:np.ndarray, X_val:np.ndarray, y_val:np.ndarray, n_labels:int, input_shape:tuple, n_neurons:int = 100):
-        self.X_train = X_train
-        self.y_train = y_train
+class LSTM_Model:
+    def __init__(self, X_train:np.ndarray, y_train:np.ndarray, X_val:np.ndarray, y_val:np.ndarray, n_labels:int, n_neurons:int = 100, init_mode='he_normal'):
+        self.X_train = np.expand_dims(X_train, 1)
+        self.y_train = keras.utils.to_categorical(y_train)
+        self.X_val = np.expand_dims(X_val, 1)
+        self.y_val = keras.utils.to_categorical(y_val)
         self.n_labels = n_labels
-        self.input_shape = input_shape
         self.n_neurons = n_neurons
+        self.init_mode = init_mode
         pass
 
     def create_model(self):
         self.model = keras.models.Sequential([
-            keras.Input(shape=self.input_shape)
+            keras.Input(shape=np.shape(self.X_train[0])),
             keras.layers.LSTM(self.n_neurons, activation='relu', kernel_initializer=self.init_mode),
             keras.layers.Dropout(0.5),
             keras.layers.Flatten(),
@@ -37,7 +39,7 @@ class LSTM_Classifier:
         pass
 
     def predict(self, X_test:np.ndarray):
-        self.y_pred = self.model.predict(X_test)
+        self.y_pred = np.argmax(self.model.predict(np.expand_dims(X_test, 1)), axis=1)
         pass
 
     def eval_model(self, X_test:np.ndarray, y_test:np.ndarray, n_eval_times:int=5):
