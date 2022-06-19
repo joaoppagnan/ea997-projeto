@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import os
 
 class MIT_BIH_Dataset:
-    def __init__(self, path:str, window_size:int=180):
+    def __init__(self, path:str, window_size:int=180, normalize:bool=False):
         self.path = path
         self.window_size = window_size
         self.classes = ['N', 'L', 'R', 'A', 'V']
@@ -14,6 +14,7 @@ class MIT_BIH_Dataset:
         self.count_classes = [0]*self.n_classes
         self.X_data = list()
         self.y_data = list()
+        self.normalize = normalize
         self.process_filenames_annotations()
         self.extract_data()
         self.rebalance_data()
@@ -51,7 +52,8 @@ class MIT_BIH_Dataset:
                         signals.insert(row_index, int(row[1]))
                     row_index += 1
 
-            #signals = stats.zscore(signals)
+            if self.normalize:
+                signals = stats.zscore(signals)
             signals = np.array(signals)
 
             with open(self.annotations[r], 'r') as fileID:
