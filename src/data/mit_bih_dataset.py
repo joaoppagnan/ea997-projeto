@@ -81,9 +81,9 @@ class MIT_BIH_Dataset:
             df_balanced.append(temp)
         df = pd.DataFrame(np.vstack(df_balanced))
         df.columns = ['MLII','Class']
-        self.df = df
-        self.X_data = df['MLII']
-        self.y_data = df['Class']
+        X_data = np.array(df['MLII'])
+        self.X_data = [x.flatten() for x in X_data]
+        self.y_data = np.array(df['Class']).astype('int')
         pass
 
     def get_filenames_annotations(self):

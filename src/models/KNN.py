@@ -16,6 +16,6 @@ class KNN_Model():
         self.y_pred = self.model.predict(X_test)
 
     def eval_model(self, y_test:np.ndarray):
-        f1  = sklearn.metrics.f1_score(self.y_test, self.y_pred, average='macro')
+        f1  = sklearn.metrics.f1_score(y_test, self.y_pred, average='macro')
         acc = sklearn.metrics.accuracy_score(y_test, self.y_pred)
         return (float(f1), float(acc))
