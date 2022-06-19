@@ -9,7 +9,7 @@ class SVM_Model():
         self.y_train = y_train
 
     def fit(self):
-        self.model.fit(self.X_train)
+        self.model.fit(self.X_train, self.y_train)
         pass
 
     def predict(self, X_test:np.ndarray):
