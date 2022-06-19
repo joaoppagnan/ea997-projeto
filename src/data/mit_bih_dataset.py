@@ -76,10 +76,12 @@ class MIT_BIH_Dataset:
         df = pd.DataFrame({'MLII':self.X_data, 'Class':self.y_data})
         df_balanced = []
         histogram = df.groupby(df["Class"], as_index=False).size()
+        random_state = 0
         for c in histogram["Class"]:
             temp = df.loc[df["Class"] == c]
-            temp = temp.sample(n=histogram["size"].min())
+            temp = temp.sample(n=histogram["size"].min(), random_state=random_state)
             df_balanced.append(temp)
+            random_state += 1
         df = pd.DataFrame(np.vstack(df_balanced))
         df.columns = ['MLII','Class']
         X_data = np.array(df['MLII'])
