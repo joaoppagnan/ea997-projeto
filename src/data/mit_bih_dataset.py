@@ -1,10 +1,14 @@
 import numpy as np
+import csv
+from scipy import stats
 import pandas as pd
+import matplotlib.pyplot as plt
 import os
 
 class MIT_BIH_Dataset:
     def __init__(self, path:str, window_size:int=180):
         self.path = path
+        self.window_size = window_size
         self.classes = ['N', 'L', 'R', 'A', 'V']
         self.n_classes = len(self.classes)
         self.count_classes = [0]*self.n_classes
@@ -12,19 +16,20 @@ class MIT_BIH_Dataset:
         self.y_data = list()
         self.process_filenames_annotations()
         self.extract_data()
+        self.rebalance_data()
         pass
 
     def process_filenames_annotations(self):
         # Read files
-        filenames = next(os.walk(self.path))[2]
+        self.filenames = next(os.walk(self.path))[2]
 
         # Split and save .csv , .txt 
         self.records = list()
         self.annotations = list()
-        filenames.sort()
+        self.filenames.sort()
 
-        # segrefating filenames and annotations
-        for f in filenames:
+        # segrefating self.filenames and annotations
+        for f in self.filenames:
             filename, file_extension = os.path.splitext(f)
             # *.csv
             if(file_extension == '.csv'):
@@ -39,15 +44,15 @@ class MIT_BIH_Dataset:
             signals = []
 
             with open(self.records[r], 'rt') as csvfile:
-                spamreader = pd.read_csv(csvfile, delimiter=',', quotechar='|') # read CSV file\
+                spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
                 row_index = -1
                 for row in spamreader:
                     if(row_index >= 0):
                         signals.insert(row_index, int(row[1]))
                     row_index += 1
 
-            # Read anotations: R position and Arrhythmia class
-            example_beat_printed = False
+            signals = stats.zscore(signals)
+
             with open(self.annotations[r], 'r') as fileID:
                 data = fileID.readlines() 
                 beat = list()
@@ -65,6 +70,20 @@ class MIT_BIH_Dataset:
                             beat = signals[pos-self.window_size:pos+self.window_size]     ## REPLACE WITH R-PEAK DETECTION
                             self.X_data.append(beat)
                             self.y_data.append(arrhythmia_index)
+
+    def rebalance_data(self):
+        df = pd.DataFrame({'MLII':self.X_data, 'Class':self.y_data})
+        df_balanced = []
+        histogram = df.groupby(df["Class"], as_index=False).size()
+        for c in histogram["Class"]:
+            temp = df.loc[df["Class"] == c]
+            temp = temp.sample(n=histogram["size"].min())
+            df_balanced.append(temp)
+        df = pd.DataFrame(np.vstack(df_balanced))
+        df.columns = ['MLII','Class']
+        self.df = df
+        self.X_data = df['MLII']
+        self.y_data = df['Class']
         pass
 
     def get_filenames_annotations(self):
@@ -75,3 +94,6 @@ class MIT_BIH_Dataset:
 
     def get_y_data(self):
         return self.y_data
+
+    def get_df(self):
+        return self.df
