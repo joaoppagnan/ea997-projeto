@@ -1,0 +1,119 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage{ragged2e}   %new code
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{varioref, babel}
+\usepackage[square,sort,comma,super]{natbib}
+\usepackage{xmpmulti}
+\usepackage{epsfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{pbox}
+\usepackage{graphicx,url}
+\usepackage{etoolbox}
+\usepackage{ru,hyperref,url} % 
+\graphicspath{{../figures/}}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,fit, positioning, arrows.meta}
+\usetikzlibrary{backgrounds}
+\usepgflibrary{shapes.multipart}
+
+\addtobeamertemplate{block begin}{}{\justifying}
+\setbeamertemplate{section in toc}[sections numbered]
+
+% The title of the presentation:
+%  - first a short version which is visible at the bottom of each slide;
+%  - second the full title shown on the title slide;
+
+\title{Detecção de doenças cardiovasculares através de sinais de ECG utilizando ferramentas de inteligência artificial}
+
+% Optional: a subtitle to be dispalyed on the title slide
+% \subtitle{Show where you're from}
+
+% The author(s) of the presentation:
+%  - again first a short version to be displayed at the bottom;
+%  - next the full list of authors, which may include contact information;
+\author[João Pedro O. Pagnan]{ \footnotesize
+  Aluno: João Pedro de Oliveira Pagnan\\
+  Professor: Prof. Dr. José Wilson Magalhães Bassani [CEB/UNICAMP]\\\medskip
+  }
+
+% The institute:
+%  - to start the name of the university as displayed on the top of each slide
+%    this can be adjusted such that you can also create a Dutch version
+%  - next the institute information as displayed on the title slide
+\institute[Universidade Estadual de Campinas ]{
+  EA997 - Introdução à Engenharia Biomédica \\
+  }
+
+% Add a date and possibly the name of the event to the slides
+%  - again first a short version to be shown at the bottom of each slide
+%  - second the full date and event name for the title slide
+\date{\scriptsize \today}
+
+\begin{document}
+
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Section titles are shown in at the top of the slides with the current section 
+% highlighted. Note that the number of sections determines the size of the top 
+% bar, and hence the university name and logo. If you do not add any sections 
+% they will not be visible.
+\section{Introdução}
+\subsection{Identificação de doenças cardiovasculares com ferramentas de IA}
+\begin{frame}
+    \frametitle{Introdução}
+    \justifying O desafio de antecipar padrões de comportamento e construir modelos que sejam apropriados para explicar determinados fenômenos da natureza tem importância para várias áreas da ciência.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Introdução}
+    \justifying Uma classe de sistemas dinâmicos particularmente relevante dentro do contexto de modelagem e predição de séries temporais está ligada à ideia de dinâmica caótica. Apesar de serem determinísticos, esses sistemas são extremamente sensíveis às condições iniciais \cite{fiedler1994caos}.
+\end{frame}
+
+
+\subsection{Previsão de séries temporais com redes neurais artificiais}
+
+\begin{frame}
+    \frametitle{Introdução}
+    \framesubtitle{Previsão de séries temporais com redes neurais artificiais}
+    \justifying Tendo em vista o desempenho de modelos não-lineares para previsão de diversas séries temporais \cite{connor1994recurrent}, optamos por estudar a aplicabilidade de redes neurais artificiais à previsão de séries relacionadas a sistemas com dinâmica caótica. 
+    
+    Esta pesquisa comparou o desempenho de quatro arquiteturas de redes neurais artificiais:
+    
+    \begin{itemize}[<+-| alert@+>]
+	\item \textit{Multilayer Perceptron} (MLP) \cite{rosenblatt1958perceptron},
+	\item \textit{Long Short-Term Memory} (LSTM) \cite{connor1994recurrent},
+	\item \textit{Gated Recurrent Unit} (GRU) \cite{cho2014learning},
+	\item \textit{Echo State Network} (ESN) \cite{jaeger2007echo}.
+    \end{itemize} 
+\end{frame}
+
+
+\appendix
+
+\begin{frame}{Referências}
+    \tiny
+    \bibliography{bib}
+    \bibliographystyle{ieeetr}
+\end{frame}
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \Huge Muito Obrigado!
+    \end{center}
+\end{frame}
+
+
+\end{document}
