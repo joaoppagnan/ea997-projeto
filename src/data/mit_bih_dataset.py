@@ -51,7 +51,8 @@ class MIT_BIH_Dataset:
                         signals.insert(row_index, int(row[1]))
                     row_index += 1
 
-            signals = stats.zscore(signals)
+            #signals = stats.zscore(signals)
+            signals = np.array(signals)
 
             with open(self.annotations[r], 'r') as fileID:
                 data = fileID.readlines() 
