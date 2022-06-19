@@ -1,2 +1,2 @@
-from . import fft
-from . import filter
+from . import FFT
+from . import Filter

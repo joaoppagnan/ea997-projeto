@@ -1,6 +1,6 @@
 import numpy as np
 
-class FFT_Transform():
+class FFT():
     def __init__(self, X_data:np.ndarray):
         self.X_data = X_data
 
