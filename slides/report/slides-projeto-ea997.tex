@@ -18,6 +18,7 @@
 \usepackage{etoolbox}
 \usepackage{ru,hyperref,url} % 
 \graphicspath{{../figures/}}
+\usepackage{indentfirst}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,fit, positioning, arrows.meta}
@@ -48,7 +49,7 @@
 %  - to start the name of the university as displayed on the top of each slide
 %    this can be adjusted such that you can also create a Dutch version
 %  - next the institute information as displayed on the title slide
-\institute[Universidade Estadual de Campinas ]{
+\institute[]{Universidade Estadual de Campinas - Faculdade de Engenharia Elétrica e Computação\\
   EA997 - Introdução à Engenharia Biomédica \\
   }
 
@@ -74,32 +75,23 @@
 \subsection{Identificação de doenças cardiovasculares com ferramentas de IA}
 \begin{frame}
     \frametitle{Introdução}
-    \justifying O desafio de antecipar padrões de comportamento e construir modelos que sejam apropriados para explicar determinados fenômenos da natureza tem importância para várias áreas da ciência.
+    \justifying 
+    \indent
+    
+    O diagnóstico de arritmias cardíacas através de sinais de eletrocardiograma (ECG) é de extrema importância para monitorar a saúde do coração através de um método não invasivo \cite{moody2001impact}.
+    
+    Devido a isso, uma boa etapa de interpretação de sinais computadorizados de ECG é fundamental para que o diagnóstico seja feito de forma precisa e, caso exista, a arritmia cardíaca seja detectada corretamente.
+    
+    Embora que tradicionalmente esta análise seja feita por cardiologistas, trabalhos recentes indicam que ferramentas computacionais de aprendizado de máquina (do inglês, \textit{machine learning}) podem obter métricas de \textbf{f-medida} e \textbf{acurácia} melhores que as alcançadas por grande parte dos cardiologistas \cite{hannun2019cardiologist, rajpurkar2017cardiologist}. 
+    
+    Desta forma, estas ferramentas podem detectar diversos tipos de arritmias cardíacas a partir de uma única derivação com desempenho comparável ao de cardiologistas e, em contextos clínicos, podem reduzir a chance de diagnósticos incorretos e melhorar a interpretação do sinal de ECG de um especialista humano que já terá uma indicação da provável arritmia que o paciente possui \cite{rajpurkar2017cardiologist}.    
+    
 \end{frame}
 
 \begin{frame}
-    \frametitle{Introdução}
-    \justifying Uma classe de sistemas dinâmicos particularmente relevante dentro do contexto de modelagem e predição de séries temporais está ligada à ideia de dinâmica caótica. Apesar de serem determinísticos, esses sistemas são extremamente sensíveis às condições iniciais \cite{fiedler1994caos}.
+	\frametitle{Introdução}
+	\justifying
 \end{frame}
-
-
-\subsection{Previsão de séries temporais com redes neurais artificiais}
-
-\begin{frame}
-    \frametitle{Introdução}
-    \framesubtitle{Previsão de séries temporais com redes neurais artificiais}
-    \justifying Tendo em vista o desempenho de modelos não-lineares para previsão de diversas séries temporais \cite{connor1994recurrent}, optamos por estudar a aplicabilidade de redes neurais artificiais à previsão de séries relacionadas a sistemas com dinâmica caótica. 
-    
-    Esta pesquisa comparou o desempenho de quatro arquiteturas de redes neurais artificiais:
-    
-    \begin{itemize}[<+-| alert@+>]
-	\item \textit{Multilayer Perceptron} (MLP) \cite{rosenblatt1958perceptron},
-	\item \textit{Long Short-Term Memory} (LSTM) \cite{connor1994recurrent},
-	\item \textit{Gated Recurrent Unit} (GRU) \cite{cho2014learning},
-	\item \textit{Echo State Network} (ESN) \cite{jaeger2007echo}.
-    \end{itemize} 
-\end{frame}
-
 
 \appendix
 
