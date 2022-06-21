@@ -27,6 +27,9 @@
 
 \addtobeamertemplate{block begin}{}{\justifying}
 \setbeamertemplate{section in toc}[sections numbered]
+\setbeamersize{text margin left = 1em}
+
+\newcommand{\doingles}[1]{\footnote{Do inglês: \emph{#1}.}}
 
 % The title of the presentation:
 %  - first a short version which is visible at the bottom of each slide;
@@ -78,19 +81,21 @@
     \justifying 
     \indent
     
-    O diagnóstico de arritmias cardíacas através de sinais de eletrocardiograma (ECG) é de extrema importância para monitorar a saúde do coração através de um método não invasivo \cite{moody2001impact}.
+    O diagnóstico de arritmias cardíacas através de sinais de eletrocardiograma (ECG) é de extrema importância para monitorar a saúde do coração através de um método não invasivo \cite{moody2001impact}. Devido a isso, uma boa etapa de interpretação de sinais computadorizados de ECG é fundamental para que o diagnóstico seja feito de forma precisa e, caso exista, a arritmia cardíaca seja detectada corretamente.
     
-    Devido a isso, uma boa etapa de interpretação de sinais computadorizados de ECG é fundamental para que o diagnóstico seja feito de forma precisa e, caso exista, a arritmia cardíaca seja detectada corretamente.
-    
-    Embora que tradicionalmente esta análise seja feita por cardiologistas, trabalhos recentes indicam que ferramentas computacionais de aprendizado de máquina (do inglês, \textit{machine learning}) podem obter métricas de \textbf{f-medida} e \textbf{acurácia} melhores que as alcançadas por grande parte dos cardiologistas \cite{hannun2019cardiologist, rajpurkar2017cardiologist}. 
-    
+    Embora que esta análise seja tradicionalmente feita por cardiologistas, trabalhos recentes indicam que ferramentas computacionais de aprendizado de máquina \doingles{Machine Learning} podem obter métricas de \textbf{f-medida} e \textbf{acurácia} melhores que as alcançadas por grande parte dos cardiologistas \cite{hannun2019cardiologist, rajpurkar2017cardiologist}.
+  
     Desta forma, estas ferramentas podem detectar diversos tipos de arritmias cardíacas a partir de uma única derivação com desempenho comparável ao de cardiologistas e, em contextos clínicos, podem reduzir a chance de diagnósticos incorretos e melhorar a interpretação do sinal de ECG de um especialista humano que já terá uma indicação da provável arritmia que o paciente possui \cite{rajpurkar2017cardiologist}.    
     
 \end{frame}
 
 \begin{frame}
-	\frametitle{Introdução}
+	\frametitle{Objetivos}
 	\justifying
+	
+	Este projeto visa implementar e comparar quatro tipos de classificadores para identificar arritmias cardíacas através de sinais de ECG: um modelo baseado em máquinas de vetores-suporte \doingles{Support Vector-Machine}, outro baseado nos $k$ vizinhos mais próximos \doingles{K-Nearest Neighbors}, um terceiro baseado em florestas aleatórias \doingles{Random Forest} e, por fim, um baseado no tipo de rede neural LSTM \doingles{Long-Short Term Memory}.
+	
+	Neste caso, planeja-se também analisar qual a melhor representação para os sinais de ECG, isto é, se representaremos os sinais no domínio do tempo ou da frequência, bem como se o uso de filtros para remoção de ruído pode aprimorar o desempenho dos classificadores.
 \end{frame}
 
 \appendix
