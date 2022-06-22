@@ -108,7 +108,7 @@
 
 	\indent{Foi utilizada a linguagem \textbf{Python 3}, mais precisamente, as bibliotecas \textbf{Scikit-Learn} e \textbf{TensorFlow} e a base de dados\doingles{Dataset} \textbf{MIT-BIH} \cite{moody2001impact}, que contém dados de 47 pessoas de 23 a 89 anos, incluindo homens e mulheres.}
 	
-	\indent{Esta base foi construída entre 1975 e 1979 e contém amostras de cinco padrões diferentes de batimento cardíaco: um padrão com o coração saudável, outro com bloqueio do ramo esquerdo, com bloqueio do ramo direito, um quarto com contração atrial prematura e, por fim, um último com contração ventricular prematura. Estes padrões estão ilustrados na figura \ref{fig:padroes-ECG}}.
+	\indent{Esta base foi construída entre 1975 e 1979 e contém amostras de cinco padrões diferentes de batimento cardíaco: um padrão com o coração saudável, outro com bloqueio do ramo esquerdo, um terceiro com bloqueio do ramo direito, um quarto com contração atrial prematura e, por fim, um último com contração ventricular prematura. Estes padrões estão ilustrados na figura \ref{fig:padroes-ECG}}.
 	
 	\indent{O dado foi digitalizado com uma frequência de $\SI{360}{\hertz}$ e cada sinal dura $\SI{1}{s}$, ou seja, cada sinal é um conjunto de $360$ valores.}
 	
@@ -124,8 +124,28 @@
 	\caption{Tipos de sinais de ECG presentes na base de dados selecionada.}
 	\label{fig:padroes-ECG}
 	\end{figure}
+	
+	\indent{Após carregar as séries temporais, os dados foram normalizados utilizando a técnica \textit{z-score}, definida abaixo:
+	\begin{equation}
+		x' = \frac{x - \mu}{\sigma},
+	\end{equation}
+	onde $x$ é o valor original, $x'$ é o valor normalizado, $\mu$ e a média dos valores do sinal e $\sigma$ é o desvio-padrão.}
+
 \end{frame}
 
+\begin{frame}
+
+\indent{Após este processo de normalização, foram criados os seguintes conjuntos de representações para os sinais:
+\begin{enumerate}
+	\item Séries temporais normalizadas;
+	\item Séries temporais normalizadas e filtradas;
+	\item Módulos dos espectros de frequência das séries temporais normalizadas;
+	\item Módulos dos espectros de frequência das séries temporais normalizadas e filtradas;
+\end{enumerate}}
+
+\indent{Vale-se mencionar que os espectros de frequência foram obtidos utilizando-se a transformada rápida de Fourier.}
+
+\end{frame}
 \appendix
 
 \begin{frame}{Referências}
