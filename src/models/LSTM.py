@@ -2,7 +2,10 @@ import numpy as np
 import sklearn
 import tensorflow as tf
 from tensorflow import keras
+import matplotlib.pyplot as plt
+import seaborn as sns
 import statistics
+from sklearn.metrics import confusion_matrix
 
 physical_devices = tf.config.list_physical_devices('GPU') 
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
@@ -55,3 +58,12 @@ class LSTM_Model:
         f1_mean_std = [statistics.mean(f1_set), statistics.stdev(f1_set)]
         acc_mean_std = [statistics.mean(acc_set), statistics.stdev(acc_set)]
         return (f1_mean_std, acc_mean_std)
+
+    def confusion_matrix(self, y_test:np.ndarray, fig_path:str):
+        fig, ax = plt.subplots(tight_layout=True)
+        ax = sns.heatmap(confusion_matrix(y_test, self.y_pred), annot=True, fmt=".0f", linewidths=.5)
+        ax.set_ylabel("Classe verdadeira")
+        ax.set_xlabel("Classe estimada")
+        cfmatrix_name = fig_path + "lstm_confusion_matrix.pdf"
+        fig.savefig(cfmatrix_name)
+        pass
