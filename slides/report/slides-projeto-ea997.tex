@@ -61,6 +61,8 @@
 %  - second the full date and event name for the title slide
 \date{\scriptsize \today}
 
+\renewcommand{\indent}{\hspace*{2em}}
+
 \begin{document}
 
 \setbeamertemplate{headline}{}
@@ -81,11 +83,11 @@
     \justifying 
     \indent
     
-    O diagnóstico de arritmias cardíacas através de sinais de eletrocardiograma (ECG) é de extrema importância para monitorar a saúde do coração através de um método não invasivo \cite{moody2001impact}. Devido a isso, uma boa etapa de interpretação de sinais computadorizados de ECG é fundamental para que o diagnóstico seja feito de forma precisa e, caso exista, a arritmia cardíaca seja detectada corretamente.
+    \indent{O diagnóstico de arritmias cardíacas através de sinais de eletrocardiograma (ECG) é de extrema importância para monitorar a saúde do coração através de um método não invasivo \cite{moody2001impact}. Devido a isso, uma boa etapa de interpretação de sinais computadorizados de ECG é fundamental para que o diagnóstico seja feito de forma precisa e, caso exista, a arritmia cardíaca seja detectada corretamente.}
     
-    Embora que esta análise seja tradicionalmente feita por cardiologistas, trabalhos recentes indicam que ferramentas computacionais de aprendizado de máquina \doingles{Machine Learning} podem obter métricas de \textbf{f-medida} e \textbf{acurácia} melhores que as alcançadas por grande parte dos cardiologistas \cite{hannun2019cardiologist, rajpurkar2017cardiologist}.
+    \indent{Embora que esta análise seja tradicionalmente feita por cardiologistas, trabalhos recentes indicam que ferramentas computacionais de aprendizado de máquina \doingles{Machine Learning} podem obter métricas de \textbf{f-medida} e \textbf{acurácia} melhores que as alcançadas por grande parte dos cardiologistas \cite{hannun2019cardiologist, rajpurkar2017cardiologist}.}
   
-    Desta forma, estas ferramentas podem detectar diversos tipos de arritmias cardíacas a partir de uma única derivação com desempenho comparável ao de cardiologistas e, em contextos clínicos, podem reduzir a chance de diagnósticos incorretos e melhorar a interpretação do sinal de ECG de um especialista humano que já terá uma indicação da provável arritmia que o paciente possui \cite{rajpurkar2017cardiologist}.    
+    \indent{Desta forma, estas ferramentas podem detectar diversos tipos de arritmias cardíacas a partir de uma única derivação com desempenho comparável ao de cardiologistas e, em contextos clínicos, podem reduzir a chance de diagnósticos incorretos e melhorar a interpretação do sinal de ECG de um especialista humano que já terá uma indicação da provável arritmia que o paciente possui \cite{rajpurkar2017cardiologist}.}    
     
 \end{frame}
 
@@ -93,16 +95,16 @@
 	\frametitle{Objetivos}
 	\justifying
 	
-	Este projeto visa implementar e comparar quatro tipos de classificadores para identificar arritmias cardíacas através de sinais de ECG: um modelo baseado em máquinas de vetores-suporte \doingles{Support Vector-Machine}, outro baseado nos $k$ vizinhos mais próximos \doingles{K-Nearest Neighbors}, um terceiro baseado em florestas aleatórias \doingles{Random Forest} e, por fim, um baseado no tipo de rede neural LSTM \doingles{Long-Short Term Memory} \cite{geron2019hands}.
+	\indent{Este projeto visa implementar e comparar quatro tipos de classificadores para identificar arritmias cardíacas através de sinais de ECG: um modelo baseado em máquinas de vetores-suporte \doingles{Support Vector-Machine}, outro baseado nos $k$ vizinhos mais próximos \doingles{K-Nearest Neighbors}, um terceiro baseado em florestas aleatórias \doingles{Random Forest} e, por fim, um baseado no tipo de rede neural LSTM \doingles{Long-Short Term Memory} \cite{geron2019hands}.}
 	
-	Neste caso, planeja-se também analisar qual a melhor representação para os sinais de ECG, isto é, se representaremos os sinais no domínio do tempo ou da frequência, bem como se o uso de filtros para remoção de ruído pode aprimorar o desempenho dos classificadores.
+	\indent{Neste caso, planeja-se também analisar qual a melhor representação para os sinais de ECG, isto é, se representaremos os sinais no domínio do tempo ou da frequência, bem como se o uso de filtros para remoção de ruído pode aprimorar o desempenho dos classificadores.}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Metodologia}
 	\justifying
 
-	Será utilizada a linguagem \textbf{Python 3}, mais precisamente, as bibliotecas \textbf{Scikit-Learn} e \textbf{TensorFlow} e a base de dados \textbf{MIT-BIH} \cite{moody2001impact}, que contém dados de 
+	\indent{Será utilizada a linguagem \textbf{Python 3}, mais precisamente, as bibliotecas \textbf{Scikit-Learn} e \textbf{TensorFlow} e a base de dados \textbf{MIT-BIH} \cite{moody2001impact}, que contém dados de 47 pessoas de 23 a 89 anos, incluindo homens e mulheres.}
 \end{frame}
 
 \appendix
