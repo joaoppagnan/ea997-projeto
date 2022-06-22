@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{moody2001impact}
+G.~B. Moody and R.~G. Mark, ``The impact of the mit-bih arrhythmia database,''
+  {\em IEEE Engineering in Medicine and Biology Magazine}, vol.~20, no.~3,
+  pp.~45--50, 2001.
+
+\bibitem{hannun2019cardiologist}
+A.~Y. Hannun, P.~Rajpurkar, M.~Haghpanahi, G.~H. Tison, C.~Bourn, M.~P.
+  Turakhia, and A.~Y. Ng, ``Cardiologist-level arrhythmia detection and
+  classification in ambulatory electrocardiograms using a deep neural
+  network,'' {\em Nature medicine}, vol.~25, no.~1, pp.~65--69, 2019.
+
+\bibitem{rajpurkar2017cardiologist}
+P.~Rajpurkar, A.~Y. Hannun, M.~Haghpanahi, C.~Bourn, and A.~Y. Ng,
+  ``Cardiologist-level arrhythmia detection with convolutional neural
+  networks,'' {\em arXiv preprint arXiv:1707.01836}, 2017.
+
+\bibitem{geron2019hands}
+A.~G{\'e}ron, {\em Hands-on machine learning with Scikit-Learn, Keras, and
+  TensorFlow: Concepts, tools, and techniques to build intelligent systems}.
+\newblock O'Reilly Media, 2019.
+
+\end{thebibliography}
