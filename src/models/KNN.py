@@ -31,6 +31,3 @@ class KNN_Model():
         cfmatrix_name = fig_path + "knn_confusion_matrix.pdf"
         fig.savefig(cfmatrix_name)
         pass
-
-    def roc_curve(self):
-        pass        
