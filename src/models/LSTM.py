@@ -64,6 +64,6 @@ class LSTM_Model:
         ax = sns.heatmap(confusion_matrix(y_test, self.y_pred), annot=True, fmt=".0f", linewidths=.5)
         ax.set_ylabel("Classe verdadeira")
         ax.set_xlabel("Classe estimada")
-        cfmatrix_name = fig_path + "lstm_confusion_matrix.pdf"
+        cfmatrix_name = fig_path + "lstm-confusion-matrix.pdf"
         fig.savefig(cfmatrix_name)
         pass

@@ -18,7 +18,7 @@ class KNN_Model():
     def predict(self, X_test:np.ndarray):
         self.y_pred = self.model.predict(X_test)
 
-    def eval_model(self, y_test:np.ndarray, fig_path:str):
+    def eval_model(self, y_test:np.ndarray):
         f1  = sklearn.metrics.f1_score(y_test, self.y_pred, average='macro')
         acc = sklearn.metrics.accuracy_score(y_test, self.y_pred)
         return (float(f1), float(acc))
@@ -28,6 +28,6 @@ class KNN_Model():
         ax = sns.heatmap(confusion_matrix(y_test, self.y_pred), annot=True, fmt=".0f", linewidths=.5)
         ax.set_ylabel("Classe verdadeira")
         ax.set_xlabel("Classe estimada")
-        cfmatrix_name = fig_path + "knn_confusion_matrix.pdf"
+        cfmatrix_name = fig_path + "knn-confusion-matrix.pdf"
         fig.savefig(cfmatrix_name)
         pass
