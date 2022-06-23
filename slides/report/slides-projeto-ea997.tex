@@ -161,13 +161,14 @@
 	\frametitle{Metodologia}
 	\justifying
 
-	\vspace{20pt}
+	\vspace{16pt}
 
 	\indent{Com as representações, os modelos foram ajustados com base em um conjunto de treinamento que continha $75\%$ do número total de sinais e avaliados em um conjunto de teste composto por $25\%$ do total.}
 	
 	\indent{No caso da rede neural, como o ajuste dos pesos dos neurônios é iterativo, pois não há solução em forma fechada, o conjunto de treinamento possui $67.5\%$ do total de amostras para que haja um conjunto de validação composto por $7.5\%$ das coletas. Este conjunto será usado durante o treinamento da rede para evitar o problema do sobreajuste.}
 	
 	\indent{Para medir o desempenho dos modelos nesta tarefa, foram utilizadas as métricas numéricas de acurácia e f-medida definidas em (\ref{eq:metrics}):
+\vspace{-8pt}
 	
 \begin{subequations}\label{eq:metrics}
 	\scriptsize
@@ -185,15 +186,20 @@
 		\end{equation}
 	\end{minipage}
 		\begin{equation}
-			\fmedida = 2 \cdot \frac{\sensibilidade \cdot \precisao}{\sensibilidade + \precisao}
+			\fmedida = 2 \cdot \frac{\sensibilidade \cdot \precisao}{\sensibilidade + \precisao},
 		\end{equation}
 	\end{subequations}}
+
+\vspace{-8pt}
+sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e negativos, respectivamente, e $FP$ e $FN$ o número de falsos positivos e negativos.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Resultados}
 	\justifying
+	
+	\indent{Utilizando as métricas indicadas anteriormente, foram obtidas as seguintes métricas para as representações utilizadas:}
 \end{frame}
 
 \appendix
