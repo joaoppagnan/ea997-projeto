@@ -31,6 +31,11 @@
 \setbeamersize{text margin left = 1em}
 \setbeamertemplate{caption}[numbered]
 
+\newcommand{\fmedida}{\text{F-medida }(\hat{y}(\mathbf{x}))}
+\newcommand{\acuracia}{\text{Acurácia }(\hat{y}(\mathbf{x}))}
+\newcommand{\sensibilidade}{\text{Sensibilidade }(\hat{y}(\mathbf{x}))}
+\newcommand{\precisao}{\text{Precisão }(\hat{y}(\mathbf{x}))}
+
 \newcommand{\doingles}[1]{\footnote{Do inglês: \emph{#1}.}}
 
 % The title of the presentation:
@@ -136,7 +141,7 @@
 	
 	\vspace{20pt}
 	
-	\indent{Após carregar as séries temporais, os dados foram normalizados utilizando a técnica \textit{z-score}, definida na equação \ref{eq:z-score}.
+	\indent{Após carregar as séries temporais, os dados foram normalizados utilizando a técnica \textit{z-score}, definida na equação (\ref{eq:z-score}).
 	\begin{equation}\label{eq:z-score}
 		x' = \frac{x - \mu}{\sigma},
 	\end{equation}
@@ -156,12 +161,39 @@
 	\frametitle{Metodologia}
 	\justifying
 
-	\indent{Após gerar as representações, os modelos foram ajustados com base em um conjunto de treinamento que continha $75\%$ do número total de sinais e avaliados em um conjunto de teste composto por $25\%$ do total.}
+	\vspace{20pt}
+
+	\indent{Com as representações, os modelos foram ajustados com base em um conjunto de treinamento que continha $75\%$ do número total de sinais e avaliados em um conjunto de teste composto por $25\%$ do total.}
 	
 	\indent{No caso da rede neural, como o ajuste dos pesos dos neurônios é iterativo, pois não há solução em forma fechada, o conjunto de treinamento possui $67.5\%$ do total de amostras para que haja um conjunto de validação composto por $7.5\%$ das coletas. Este conjunto será usado durante o treinamento da rede para evitar o problema do sobreajuste.}
 	
+	\indent{Para medir o desempenho dos modelos nesta tarefa, foram utilizadas as métricas numéricas de acurácia e f-medida definidas em (\ref{eq:metrics}):
 	
+\begin{subequations}\label{eq:metrics}
+	\scriptsize
+		\begin{equation}
+			\acuracia = \frac{TP + TN}{N},
+		\end{equation}
+	\begin{minipage}{0.5\textwidth}
+		\begin{equation}
+		\precisao = \frac{TP}{TP + FP},
+		\end{equation}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\begin{equation}
+			\sensibilidade = \frac{TP}{TP + FN},
+		\end{equation}
+	\end{minipage}
+		\begin{equation}
+			\fmedida = 2 \cdot \frac{\sensibilidade \cdot \precisao}{\sensibilidade + \precisao}
+		\end{equation}
+	\end{subequations}}
 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Resultados}
+	\justifying
 \end{frame}
 
 \appendix
