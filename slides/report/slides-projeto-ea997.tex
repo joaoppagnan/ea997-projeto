@@ -110,7 +110,7 @@
 	
 	\indent{Esta base foi construída entre 1975 e 1979 e contém amostras de cinco padrões diferentes de batimento cardíaco: um padrão com o coração saudável, outro com bloqueio do ramo esquerdo, um terceiro com bloqueio do ramo direito, um quarto com contração atrial prematura e, por fim, um último com contração ventricular prematura. Estes padrões estão ilustrados na figura \ref{fig:padroes-ECG}}.
 	
-	\indent{O dado foi digitalizado com uma frequência de $\SI{360}{\hertz}$ e cada sinal dura $\SI{1}{s}$, ou seja, cada sinal é um conjunto de $360$ valores e, por fim, foi utilizada a derivação derivação precordial (V2).}
+	\indent{O dado foi digitalizado com uma frequência de $\SI{360}{\hertz}$ e cada sinal dura $\SI{1}{s}$, ou seja, cada sinal é um conjunto de $360$ valores e, por fim, foi utilizada a derivação precordial (V2).}
 	
 \end{frame}
 
@@ -127,7 +127,7 @@
 	\label{fig:padroes-ECG}
 	\end{figure}
 	
-	\indent{A base de dados foi balançeada para que todas as classes tenham a mesma proporção no conjunto final, ou seja, haja o mesmo número de sinais em todos os tipos de batimentos cardíacos presentes nos sinais de ECG.}
+	\indent{A base de dados foi balançeada para que todas as classes tenham a mesma proporção no conjunto final, ou seja, haja o mesmo número  de sinais (2546) em todos os tipos de batimentos cardíacos presentes nos sinais de ECG.}
 \end{frame}	
 	
 \begin{frame}	
@@ -156,8 +156,14 @@
 	\frametitle{Metodologia}
 	\justifying
 
+	\indent{Após gerar as representações, os modelos foram ajustados com base em um conjunto de treinamento que continha $75\%$ do número total de sinais e avaliados em um conjunto de teste composto por $25\%$ do total.}
+	
+	\indent{No caso da rede neural, como o ajuste dos pesos dos neurônios é iterativo, pois não há solução em forma fechada, o conjunto de treinamento possui $67.5\%$ do total de amostras para que haja um conjunto de validação composto por $7.5\%$ das coletas. Este conjunto será usado durante o treinamento da rede para evitar o problema do sobreajuste.}
+	
+	
 
 \end{frame}
+
 \appendix
 
 \begin{frame}{Referências}
