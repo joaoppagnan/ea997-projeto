@@ -4,7 +4,6 @@
 \usepackage{ragged2e}   %new code
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{varioref, babel}
-\usepackage[square,sort,comma,super]{natbib}
 \usepackage{xmpmulti}
 \usepackage{epsfig}
 \usepackage{caption}
@@ -30,6 +29,7 @@
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamersize{text margin left = 1em}
 \setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}[text]
 
 \newcommand{\fmedida}{\text{F-medida }(\hat{y}(\mathbf{x}))}
 \newcommand{\acuracia}{\text{Acurácia }(\hat{y}(\mathbf{x}))}
@@ -113,7 +113,7 @@
 
 	\indent{Foi utilizada a linguagem \textbf{Python 3}, mais precisamente, as bibliotecas \textbf{Scikit-Learn} e \textbf{TensorFlow} e a base de dados\doingles{Dataset} aberta \textbf{MIT-BIH} \cite{moody2001impact}, que contém dados de 47 pessoas de 23 a 89 anos, incluindo homens e mulheres.}
 	
-	\indent{Esta base foi construída entre 1975 e 1979 e contém amostras de cinco padrões diferentes de batimento cardíaco: um padrão com o coração saudável, outro com bloqueio do ramo esquerdo, um terceiro com bloqueio do ramo direito, um quarto com contração atrial prematura e, por fim, um último com contração ventricular prematura. Estes padrões estão ilustrados na figura \ref{fig:padroes-ECG}}.
+	\indent{Esta base foi construída entre 1975 e 1979 e contém amostras de cinco padrões diferentes de batimento cardíaco: um padrão com o coração saudável, outro com bloqueio do ramo esquerdo, um terceiro com bloqueio do ramo direito, um quarto com contração atrial prematura e, por fim, um último com contração ventricular prematura. Estes padrões estão ilustrados na Figura \ref{fig:padroes-ECG}}.
 	
 	\indent{O dado foi digitalizado com uma frequência de $\SI{360}{\hertz}$ e cada sinal dura $\SI{1}{s}$, ou seja, cada sinal é um conjunto de $360$ valores e, por fim, foi utilizada a derivação precordial (V2).}
 	
@@ -287,7 +287,7 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 	
 	\vspace{17pt}
 
-	\indent{Utilizando a representação que obteve os melhores valores para as métrica (sinais temporais não-filtrados) foram obtidas as seguintes matrizes de confusão para os classificadores utilizados:}
+	\indent{Utilizando a representação que obteve os melhores valores para as métrica (sinais temporais não-filtrados) foram obtidas as  matrizes de confusão indicadas na Figura \ref{fig:conf-matrix} para os classificadores utilizados:}
 	
 	\begin{figure}[H]
 		\begin{subfigure}[H]{0.325\textwidth}
@@ -316,6 +316,7 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 		\end{subfigure}
 		\centering
 		\caption{Matrizes de confusão obtidas pelos quatro modelos avaliados utilizando os sinais temporais não-filtrados.}
+		\label{fig:conf-matrix}
 	\end{figure}		
 	
 \end{frame}
@@ -335,7 +336,7 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 	
 	\vspace{10pt}
 	
-	\indent{Devido ao quarto ponto mencionado acima, recomenda-se que, caso seja determinado pelo modelo que o indivíduo não possui as arritmias analisadas, esta pessoa faça mais exames para confirmar este fato.}
+	\indent{Devido ao quarto ponto mencionado acima, recomenda-se que, caso seja determinado pelo modelo que o indivíduo não possui as arritmias analisadas, esta pessoa faça mais exames para confirmar este fato.}`
 	
 	\end{enumerate}}
 \end{frame}
@@ -344,7 +345,14 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 	\frametitle{Conclusão}
 	\justifying
 	
-	\indent{Com este projeto conclui-se que ferramentas de aprendizado de máquina e }
+	\indent{Com este projeto conclui-se que ferramentas de aprendizado de máquina podem ser bem úteis para a análise clínica de sinais de ECG coletadas de pacientes.}
+	
+	\indent{Obviamente, esta é uma análise preliminar feita com apenas quatro tipos de arritmia (além de sinais de corações saudáveis), mas, junto a outros trabalhos da literatura, como \cite{moody2001impact, hannun2019cardiologist} e \cite{rajpurkar2017cardiologist}, é um bom indicador de que este tipo de ferramenta tem espaço em análises médicas.}
+	
+	\indent{Mais precisamente, ferramentas baseadas em aprendizado de máquina para classificar sinais de eletrocardiograma seriam bem utilizadas em regiões do país (e do mundo) onde não há cardiologistas suficientes para atenderem à demanda das populações locais.}
+	
+	\indent{Desta forma, conclui-se que este projeto cumpriu o seu propósito de detecção de doenças cardiovasculares através de sinais e ECG utilizando ferramentas de inteligência artificial.}	
+	
 \end{frame}
 
 \appendix

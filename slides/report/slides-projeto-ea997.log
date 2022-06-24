@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.18)  24 JUN 2022 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.18)  24 JUN 2022 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -777,15 +777,8 @@ Package babel Info: \l@brazil = using hyphenrules for portuguese
 (babel)             (\language5) on input line 113.
 Package babel Info: Making " an active character on input line 145.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip79
-\bibsep=\skip80
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count324
-)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/xmpmulti.sty
-\@mpm@count=\count325
+\@mpm@count=\count324
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
@@ -807,8 +800,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 61.
 \caption@hangindent=\dimen295
 Package caption Info: beamer document class detected.
 )
-\c@caption@flags=\count326
-\c@continuedfloat=\count327
+\c@caption@flags=\count325
+\c@continuedfloat=\count326
 Package caption Info: beamer document class.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
@@ -816,8 +809,8 @@ Package caption Info: Hyperref support is turned off
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
-\c@subfigure=\count328
-\c@subtable=\count329
+\c@subfigure=\count327
+\c@subtable=\count328
 )
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -825,15 +818,15 @@ Package: expl3 2020-02-14 L3 programming layer (loader)
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count330
+\l__kernel_color_stack_int=\count329
 \l__pdf_internal_box=\box119
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2020-02-14 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count331
-\g__xparse_grabber_int=\count332
-\l__xparse_m_args_int=\count333
-\l__xparse_v_nesting_int=\count334
+\l__xparse_current_arg_int=\count330
+\g__xparse_grabber_int=\count331
+\l__xparse_m_args_int=\count332
+\l__xparse_v_nesting_int=\count333
 )
 Package: siunitx 2020/01/15 v2.7u A comprehensive (SI) units package
 
@@ -843,8 +836,8 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \ar@mcellbox=\box120
 \extrarowheight=\dimen297
 \NC@list=\toks45
-\extratabsurround=\skip81
-\backup@length=\skip82
+\extratabsurround=\skip79
+\backup@length=\skip80
 \ar@cellbox=\box121
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
@@ -852,29 +845,29 @@ Package: l3keys2e 2020-02-14 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box122
 \l__siunitx_tmp_dim=\dimen298
-\l__siunitx_tmp_int=\count335
-\l__siunitx_number_mantissa_length_int=\count336
-\l__siunitx_number_uncert_length_int=\count337
-\l__siunitx_round_int=\count338
-\l__siunitx_process_decimal_int=\count339
-\l__siunitx_process_uncertainty_int=\count340
-\l__siunitx_process_fixed_int=\count341
-\l__siunitx_process_integer_min_int=\count342
-\l__siunitx_process_precision_int=\count343
-\l__siunitx_group_min_int=\count344
+\l__siunitx_tmp_int=\count334
+\l__siunitx_number_mantissa_length_int=\count335
+\l__siunitx_number_uncert_length_int=\count336
+\l__siunitx_round_int=\count337
+\l__siunitx_process_decimal_int=\count338
+\l__siunitx_process_uncertainty_int=\count339
+\l__siunitx_process_fixed_int=\count340
+\l__siunitx_process_integer_min_int=\count341
+\l__siunitx_process_precision_int=\count342
+\l__siunitx_group_min_int=\count343
 \l__siunitx_angle_marker_box=\box123
 \l__siunitx_angle_unit_box=\box124
 \l__siunitx_angle_marker_dim=\dimen299
 \l__siunitx_angle_unit_dim=\dimen300
-\l__siunitx_unit_int=\count345
-\l__siunitx_unit_denominator_int=\count346
-\l__siunitx_unit_numerator_int=\count347
-\l__siunitx_unit_prefix_int=\count348
-\l__siunitx_unit_prefix_base_int=\count349
-\l__siunitx_unit_prefix_gram_int=\count350
-\l__siunitx_number_product_int=\count351
-\c__siunitx_one_fill_skip=\skip83
-\l__siunitx_table_unit_align_skip=\skip84
+\l__siunitx_unit_int=\count344
+\l__siunitx_unit_denominator_int=\count345
+\l__siunitx_unit_numerator_int=\count346
+\l__siunitx_unit_prefix_int=\count347
+\l__siunitx_unit_prefix_base_int=\count348
+\l__siunitx_unit_prefix_gram_int=\count349
+\l__siunitx_number_product_int=\count350
+\c__siunitx_one_fill_skip=\skip81
+\l__siunitx_table_unit_align_skip=\skip82
 \l__siunitx_table_exponent_dim=\dimen301
 \l__siunitx_table_integer_dim=\dimen302
 \l__siunitx_table_mantissa_dim=\dimen303
@@ -888,24 +881,24 @@ Package: l3keys2e 2020-02-14 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_post_box=\box126
 \l__siunitx_table_mantissa_box=\box127
 \l__siunitx_table_result_box=\box128
-\l__siunitx_table_number_align_skip=\skip85
-\l__siunitx_table_text_align_skip=\skip86
+\l__siunitx_table_number_align_skip=\skip83
+\l__siunitx_table_text_align_skip=\skip84
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count352
-\calc@Bcount=\count353
+\calc@Acount=\count351
+\calc@Bcount=\count352
 \calc@Adimen=\dimen310
 \calc@Bdimen=\dimen311
-\calc@Askip=\skip87
-\calc@Bskip=\skip88
+\calc@Askip=\skip85
+\calc@Bskip=\skip86
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count354
-\calc@Cskip=\skip89
+\calc@Ccount=\count353
+\calc@Cskip=\skip87
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
@@ -914,9 +907,9 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count355
+\g_MT_multlinerow_int=\count354
 \l_MT_multwidth_dim=\dimen312
-\origjot=\skip90
+\origjot=\skip88
 \l_MT_shortvdotswithinadjustabove_dim=\dimen313
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen314
 \l_MT_above_intertext_sep=\dimen315
@@ -936,12 +929,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen326
 \cmidrulekern=\dimen327
 \defaultaddspace=\dimen328
-\@cmidla=\count356
-\@cmidlb=\count357
+\@cmidla=\count355
+\@cmidlb=\count356
 \@aboverulesep=\dimen329
 \@belowrulesep=\dimen330
-\@thisruleclass=\count358
-\@lastruleclass=\count359
+\@thisruleclass=\count357
+\@lastruleclass=\count358
 \@thisrulewidth=\dimen331
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pbox/pbox.sty
@@ -950,7 +943,7 @@ Package: pbox 2011/12/07 v1.2 Dynamic parboxes
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\pb@xlen=\skip91
+\pb@xlen=\skip89
 ) (./ru.sty
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemesplit.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
@@ -999,7 +992,7 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count360
+\pgf@plot@mark@count=\count359
 \pgfplotmarksize=\dimen336
 )
 \tikz@lastx=\dimen337
@@ -1014,18 +1007,18 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@figbox@bg=\box131
 \tikz@tempbox=\box132
 \tikz@tempbox@bg=\box133
-\tikztreelevel=\count361
-\tikznumberofchildren=\count362
-\tikznumberofcurrentchild=\count363
-\tikz@fig@count=\count364
+\tikztreelevel=\count360
+\tikznumberofchildren=\count361
+\tikznumberofcurrentchild=\count362
+\tikz@fig@count=\count363
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count365
-\pgfmatrixcurrentcolumn=\count366
-\pgf@matrix@numberofcolumns=\count367
+\pgfmatrixcurrentrow=\count364
+\pgfmatrixcurrentcolumn=\count365
+\pgf@matrix@numberofcolumns=\count366
 )
-\tikz@expandcount=\count368
+\tikz@expandcount=\count367
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1202,16 +1195,16 @@ LaTeX Font Info:    ... okay on input line 73.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count369
+\scratchcounter=\count368
 \scratchdimen=\dimen350
 \scratchbox=\box156
-\nofMPsegments=\count370
-\nofMParguments=\count371
+\nofMPsegments=\count369
+\nofMParguments=\count370
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count372
+\MPscratchCnt=\count371
 \MPscratchDim=\dimen351
-\MPnumerator=\count373
-\makeMPintoPDFobject=\count374
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
 \everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1235,7 +1228,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count375
+\c@section@level=\count374
 LaTeX Info: Redefining \Ref on input line 520.
 )
 LaTeX Info: Redefining \ref on input line 73.
@@ -1369,7 +1362,7 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ] [4
 
 ]
-<../figures/unfiltered-time-signals.pdf, id=75, 1300.86pt x 578.16pt>
+<../figures/unfiltered-time-signals.pdf, id=71, 1300.86pt x 578.16pt>
 File: ../figures/unfiltered-time-signals.pdf Graphic file (type pdf)
 <use ../figures/unfiltered-time-signals.pdf>
 Package pdftex.def Info: ../figures/unfiltered-time-signals.pdf  used on input 
@@ -1412,32 +1405,32 @@ Overfull \vbox (8.40912pt too high) detected at line 282
 [8
 
 ]
-<../figures/svm-confusion-matrix.pdf, id=120, 433.62pt x 289.08pt>
+<../figures/svm-confusion-matrix.pdf, id=117, 433.62pt x 289.08pt>
 File: ../figures/svm-confusion-matrix.pdf Graphic file (type pdf)
 <use ../figures/svm-confusion-matrix.pdf>
 Package pdftex.def Info: ../figures/svm-confusion-matrix.pdf  used on input lin
-e 321.
+e 322.
 (pdftex.def)             Requested size: 86.72246pt x 57.81497pt.
-<../figures/knn-confusion-matrix.pdf, id=121, 433.62pt x 289.08pt>
+<../figures/knn-confusion-matrix.pdf, id=118, 433.62pt x 289.08pt>
 File: ../figures/knn-confusion-matrix.pdf Graphic file (type pdf)
 <use ../figures/knn-confusion-matrix.pdf>
 Package pdftex.def Info: ../figures/knn-confusion-matrix.pdf  used on input lin
-e 321.
+e 322.
 (pdftex.def)             Requested size: 86.72246pt x 57.81497pt.
-<../figures/rf-confusion-matrix.pdf, id=122, 433.62pt x 289.08pt>
+<../figures/rf-confusion-matrix.pdf, id=119, 433.62pt x 289.08pt>
 File: ../figures/rf-confusion-matrix.pdf Graphic file (type pdf)
 <use ../figures/rf-confusion-matrix.pdf>
 Package pdftex.def Info: ../figures/rf-confusion-matrix.pdf  used on input line
- 321.
+ 322.
 (pdftex.def)             Requested size: 86.72246pt x 57.81497pt.
-<../figures/lstm-confusion-matrix.pdf, id=123, 433.62pt x 289.08pt>
+<../figures/lstm-confusion-matrix.pdf, id=120, 433.62pt x 289.08pt>
 File: ../figures/lstm-confusion-matrix.pdf Graphic file (type pdf)
 <use ../figures/lstm-confusion-matrix.pdf>
 Package pdftex.def Info: ../figures/lstm-confusion-matrix.pdf  used on input li
-ne 321.
+ne 322.
 (pdftex.def)             Requested size: 86.72246pt x 57.81497pt.
 
-Overfull \vbox (23.50095pt too high) detected at line 321
+Overfull \vbox (23.50095pt too high) detected at line 322
  []
 
 [9
@@ -1472,23 +1465,23 @@ PDF inclusion: multiple pdfs with page group included in a single page
 \tf@snm=\write8
 \openout8 = `slides-projeto-ea997.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
  (./slides-projeto-ea997.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 373.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 373.
 Package rerunfilecheck Info: File `slides-projeto-ea997.out' has not changed.
-(rerunfilecheck)             Checksum: 52BDDD57AAE51B8987C61C802D7BB560;273.
+(rerunfilecheck)             Checksum: E815FFAC00187729B77A6667B0F6F8E7;216.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 29946 strings out of 481239
- 631149 string characters out of 5920377
- 910227 words of memory out of 5000000
- 44491 multiletter control sequences out of 15000+600000
+ 29640 strings out of 481239
+ 628236 string characters out of 5920377
+ 904643 words of memory out of 5000000
+ 44189 multiletter control sequences out of 15000+600000
  554292 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,12n,69p,811b,868s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1512,10 +1505,10 @@ r/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr
 ype1/public/cm-super/sfss2488.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfsx0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on slides-projeto-ea997.pdf (13 pages, 325677 bytes).
+Output written on slides-projeto-ea997.pdf (13 pages, 326639 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
+ 263 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
  38 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 104 words of extra memory for PDF output out of 10000 (max. 10000000)
 
