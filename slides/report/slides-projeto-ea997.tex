@@ -292,29 +292,30 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 	\begin{figure}[H]
 		\begin{subfigure}[H]{0.325\textwidth}
 			\centering
-			\includegraphics[scale=0.25]{svm-confusion-matrix}
-			\caption{SVM}
+			\includegraphics[scale=0.2]{svm-confusion-matrix}
+			\caption{\scriptsize SVM}
 		\end{subfigure}
 		\centering
 		\begin{subfigure}[H]{0.325\textwidth}
 			\centering
-			\includegraphics[scale=0.25]{knn-confusion-matrix}
+			\includegraphics[scale=0.2]{knn-confusion-matrix}
 			\caption{KNN}
 		\end{subfigure}
 		\\
 		\centering
 		\begin{subfigure}[H]{0.325\textwidth}
 			\centering
-			\includegraphics[scale=0.25]{rf-confusion-matrix}
+			\includegraphics[scale=0.2]{rf-confusion-matrix}
 			\caption{RF}
 		\end{subfigure}
 		\centering
 		\begin{subfigure}[H]{0.325\textwidth}
 			\centering
-			\includegraphics[scale=0.25]{lstm-confusion-matrix}
+			\includegraphics[scale=0.2]{lstm-confusion-matrix}
 			\caption{LSTM}
 		\end{subfigure}
 		\centering
+		\caption{Matrizes de confusão obtidas pelos quatro modelos avaliados utilizando os sinais temporais não-filtrados.}
 	\end{figure}		
 	
 \end{frame}
@@ -322,19 +323,28 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 \begin{frame}
 	\frametitle{Discussão}
 	\justifying
+
+	\vspace{15pt}	
 	
 	\indent{Analisando os resultados obtidos pode-se perceber que:
 	\begin{enumerate}
 		\item Representar os dados de ECG no formato de séries temporais favorece a classificação;
-		\item A filtragem prejudicou a classificação;
-		\item A classificação incorreta que mais prejudicou o desempenho de todos os modelos foi a confusão da classe 0 com a classe 3, ou seja, os classificadores indicaram que um sinal de ECG de uma pessoa com contração atrial prematura é o de uma pessoa com coração saudável;
-		\item O melhor modelo classificador (em todas as representações) foi o baseado em redes LSTM.
+		\item A filtragem utilizada prejudicou a classificação;
+		\item O melhor modelo classificador (em todas as representações) foi o baseado em redes LSTM;
+		\item A classificação incorreta que mais prejudicou o desempenho de todos os modelos foi a confusão da classe 0 com a classe 3, ou seja, os classificadores indicaram que um sinal de ECG de uma pessoa com contração atrial prematura é o de uma pessoa com coração saudável.
+	
+	\vspace{10pt}
+	
+	\indent{Devido ao quarto ponto mencionado acima, recomenda-se que, caso seja determinado pelo modelo que o indivíduo não possui as arritmias analisadas, esta pessoa faça mais exames para confirmar este fato.}
+	
 	\end{enumerate}}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Conclusão}
 	\justifying
+	
+	\indent{Com este projeto conclui-se que ferramentas de aprendizado de máquina e }
 \end{frame}
 
 \appendix
