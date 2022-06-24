@@ -102,7 +102,7 @@
 	\frametitle{Objetivos}
 	\justifying
 	
-	\indent{Este projeto visa implementar e comparar quatro tipos de classificadores para identificar arritmias cardíacas através de sinais de ECG: um modelo baseado em máquinas de vetores-suporte \doingles{Support Vector-Machine}, outro baseado nos $k$ vizinhos mais próximos \doingles{K-Nearest Neighbors}, um terceiro baseado em florestas aleatórias \doingles{Random Forest} e, por fim, um baseado no tipo de rede neural LSTM \doingles{Long-Short Term Memory} \cite{geron2019hands}.}
+	\indent{Este projeto visa implementar e comparar quatro tipos de classificadores para identificar arritmias cardíacas através de sinais de ECG: um modelo baseado em máquinas de vetores-suporte (SVM\doingles{Support Vector-Machine}), outro baseado nos $k$ vizinhos mais próximos (KNN\doingles{K-Nearest Neighbors}), um terceiro baseado em florestas aleatórias (RF\doingles{Random Forest}) e, por fim, um baseado no tipo de rede neural LSTM \doingles{Long-Short Term Memory} \cite{geron2019hands}.}
 	
 	\indent{Neste caso, planeja-se também analisar qual a melhor representação para os sinais de ECG, isto é, se representaremos os sinais no domínio do tempo ou da frequência, bem como se o uso de filtros para remoção de ruído pode aprimorar o desempenho dos classificadores.}
 \end{frame}
@@ -198,8 +198,87 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 \begin{frame}
 	\frametitle{Resultados}
 	\justifying
-	
+
+	\vspace{20pt}
+
 	\indent{Utilizando as métricas indicadas anteriormente, foram obtidas as seguintes métricas para as representações utilizadas:}
+	
+	\begin{minipage}{0.5\textwidth}
+	\tiny
+	\begin{table}[H]
+		\begin{center}
+		\caption{Métricas obtidas para os sinais temporais não filtrados.}
+		\begin{tabular}{c c c c}
+		\toprule
+		\textbf{Modelo} & \textbf{Acurácia} & \textbf{F-medida} \\
+		\midrule
+		\textbf{SVM} & 0.9654 & 0.9658\\
+		\textbf{KNN} & 0.9538 & 0.9541\\
+		\textbf{RF} & 0.9627 & 0.9623\\
+		\textbf{LSTM} & $(0.9709 \pm 0.0029)$ & $(0.9711 \pm 0.0029)$\\
+		\bottomrule
+		\end{tabular}
+		\end{center}
+	\end{table}
+	\end{minipage}
+	\hfill		
+	\begin{minipage}{0.5\textwidth}
+	\tiny
+	\begin{table}[H]
+		\begin{center}
+		\caption{Métricas obtidas para os sinais temporais filtrados.}
+		\begin{tabular}{c c c c}
+		\toprule
+		\textbf{Modelo} & \textbf{Acurácia} & \textbf{F-medida} \\
+		\midrule
+		\textbf{SVM} & 0.9544 & 0.9549\\
+		\textbf{KNN} & 0.9560 & 0.95640\\
+		\textbf{RF} & 0.9627 & 0.9623\\
+		\textbf{LSTM} & $(0.9683 \pm 0.0041)$ & $(0.9685 \pm 0.0041)$\\
+		\bottomrule
+		\end{tabular}
+		\end{center}
+	\end{table}
+	\end{minipage}
+	
+	\begin{minipage}{0.5\textwidth}
+	\tiny
+	\begin{table}[H]
+		\begin{center}
+		\caption{Métricas obtidas para os módulo dos espectros em frequência não filtrados.}
+		\begin{tabular}{c c c c}
+		\toprule
+		\textbf{Modelo} & \textbf{Acurácia} & \textbf{F-medida} \\
+		\midrule
+		\textbf{SVM} & 0.9061 & 0.9068\\
+		\textbf{KNN} & 0.9538 & 0.9541\\
+		\textbf{RF} & 0.9189 & 0.9189\\
+		\textbf{LSTM} & $(0.9176 \pm 0.0066)$ & $(0.9190 \pm 0.0067)$\\
+		\bottomrule
+		\end{tabular}
+		\end{center}
+	\end{table}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.5\textwidth}
+	\tiny
+	\begin{table}[H]
+		\begin{center}
+		\caption{Métricas obtidas para os módulo dos espectros em frequência filtrados.}
+		\begin{tabular}{c c c c}
+		\toprule
+		\textbf{Modelo} & \textbf{Acurácia} & \textbf{F-medida} \\
+		\midrule
+		\textbf{SVM} & 0.8960 & 0.8966\\
+		\textbf{KNN} & 0.9010 & 0.9013\\
+		\textbf{RF} & 0.9139 & 0.9139\\
+		\textbf{LSTM} & $(0.9247 \pm 0.0037)$ & $(0.9253 \pm 0.0039)$\\
+		\bottomrule
+		\end{tabular}
+		\end{center}
+	\end{table}
+	\end{minipage}
+	
 \end{frame}
 
 \appendix
