@@ -207,7 +207,7 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 	\tiny
 	\begin{table}[H]
 		\begin{center}
-		\caption{Métricas obtidas para os sinais temporais não filtrados.}
+		\caption{Métricas obtidas para os sinais temporais não-filtrados.}
 		\begin{tabular}{c c c c}
 		\toprule
 		\textbf{Modelo} & \textbf{Acurácia} & \textbf{F-medida} \\
@@ -245,7 +245,7 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 	\tiny
 	\begin{table}[H]
 		\begin{center}
-		\caption{Métricas obtidas para os módulo dos espectros em frequência não filtrados.}
+		\caption{Métricas obtidas para os módulo dos espectros em frequência não-filtrados.}
 		\begin{tabular}{c c c c}
 		\toprule
 		\textbf{Modelo} & \textbf{Acurácia} & \textbf{F-medida} \\
@@ -279,6 +279,54 @@ sendo $N$ o total de amostras, $TP$ e $TN$ o número de verdadeiros positivos e 
 	\end{table}
 	\end{minipage}
 	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Resultados}
+	\justifying
+	
+	\vspace{17pt}
+
+	\indent{Utilizando a representação que obteve os melhores valores para as métrica (sinais temporais não-filtrados) foram obtidas as seguintes matrizes de confusão para os classificadores utilizados:}
+	
+	\begin{figure}[H]
+		\begin{subfigure}[H]{0.325\textwidth}
+			\centering
+			\includegraphics[scale=0.25]{svm-confusion-matrix}
+			\caption{SVM}
+		\end{subfigure}
+		\centering
+		\begin{subfigure}[H]{0.325\textwidth}
+			\centering
+			\includegraphics[scale=0.25]{knn-confusion-matrix}
+			\caption{KNN}
+		\end{subfigure}
+		\\
+		\centering
+		\begin{subfigure}[H]{0.325\textwidth}
+			\centering
+			\includegraphics[scale=0.25]{rf-confusion-matrix}
+			\caption{RF}
+		\end{subfigure}
+		\centering
+		\begin{subfigure}[H]{0.325\textwidth}
+			\centering
+			\includegraphics[scale=0.25]{lstm-confusion-matrix}
+			\caption{LSTM}
+		\end{subfigure}
+		\centering
+	\end{figure}		
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Discussão}
+	\justifying
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusão}
+	\justifying
 \end{frame}
 
 \appendix
