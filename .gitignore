@@ -10,6 +10,8 @@
 **/.local/
 **/.jupyter/
 *.egg-info/
+slides/
+references/
 
 # ignore these files
 *.pyc
